@@ -19,50 +19,23 @@
 /*additional css*/
 
 /*for additional css*/
-.about .video-wrapper {
+.video-wrapper {
   position: relative;
-  overflow: hidden;
 }
 
-.about .img-fluid {
-  width: 100%;
-  height: auto;
-}
-
-.about .video-play-button {
+.video-play-button {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 10;
-  background-color: rgba(255, 0, 0, 0.8); /* Green background */
-  border-radius: 50%;
-  width: 80px;
-  height: 80px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s ease;
   cursor: pointer;
+  font-size: 3rem; /* Adjust size as needed */
+  color: #fff; /* Adjust color as needed */
+  z-index: 2; /* Ensure the button is on top of the video */
 }
 
-.about .video-play-button:hover {
-  background-color: rgb(0, 119, 255); /* Solid green on hover */
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-}
-
-.about .video-play-button i {
-  font-size: 40px;
-  color: white;
-}
-
-.about .youtube-video {
+.video-play-button.hidden {
   display: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
 }
 /*nav menu*/
 /* Mobile Menu */

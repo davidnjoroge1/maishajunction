@@ -127,13 +127,12 @@
     
           <div class="col-lg-6 d-flex align-items-center position-relative" data-aos="zoom-out" data-aos-delay="200">
             <div class="video-wrapper">
-              <img src="assets/img/mutinda.png" class="img-fluid" alt="About Us Video Thumbnail">
-              <iframe id="youtubeVideo" class="youtube-video" src="https://www.youtube.com/embed/qKbJdDIcrII?start=33" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-              <div class="video-play-button" onclick="playVideo()">
-                <i class="bi bi-play-circle"></i>
-              </div>
+                <iframe id="youtubeVideo" width="560" height="315" src="https://www.youtube.com/embed/h4mFt8O_k8s" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                <div class="video-play-button" id="playButton" onclick="playVideo()">
+                    <i class="bi bi-play-circle"></i>
+                </div>
             </div>
-          </div>
+        </div>
         </div>
       </div>
     </section>
@@ -1205,8 +1204,8 @@
                 <div class="info-item" data-aos="fade" data-aos-delay="200">
                   <i class="bi bi-geo-alt"></i>
                   <h3>Address</h3>
-                  <p>Kajiado</p>
-                  <p>Kenya Kajiado Nkoroi</p>
+                  <p>Machakos</p>
+                  <p>Kenya</p>
                 </div>
               </div><!-- End Info Item -->
 
@@ -1309,7 +1308,7 @@
           </a>
           <div class="footer-contact pt-3">
             <p>Kenya </p>
-            <p>Kajiado Nkoroi</p>
+            <p>Machakos</p>
             <p class="mt-3"><strong>Phone:</strong> <span>+254715843035</span></p>
             <p><strong>Email:</strong> <span>enquiries@maishajunction.org</span></p>
           </div>
@@ -1380,15 +1379,16 @@
   <script src="assets/js/main.js"></script>
   <script>
     function playVideo() {
-        const thumbnail = document.querySelector('.img-fluid');
-        const youtubeVideo = document.getElementById('youtubeVideo');
-        const playButton = document.querySelector('.video-play-button');
-        
-        thumbnail.style.display = 'none';
-        youtubeVideo.style.display = 'block';
-        youtubeVideo.src += "&autoplay=1";
-        playButton.style.display = 'none';
-    }
+            const iframe = document.getElementById('youtubeVideo');
+            const playButton = document.getElementById('playButton');
+
+            // Update iframe src to include autoplay parameter
+            const iframeSrc = iframe.src;
+            iframe.src = iframeSrc + "?autoplay=1";
+
+            // Hide the play button
+            playButton.classList.add('hidden');
+        }
 </script>
 
 </body>
