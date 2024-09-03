@@ -29,7 +29,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
      "*",
-     'corsheaders',
+     #'corsheaders',
 ]
 
 
@@ -56,7 +56,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware', 
-    'corsheaders.middleware.CorsMiddleware',
+    #'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'maishajunction.urls'
@@ -90,7 +90,6 @@ DATABASES = {
     }
 }
 
-"""
 
 DATABASES = {
     'default': dj_database_url.config(
@@ -99,6 +98,7 @@ DATABASES = {
         conn_max_age=600
     )
 }
+"""
 
 
 
