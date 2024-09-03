@@ -85,6 +85,18 @@ DATABASES = {
     }
 }
 
+"""
+
+DATABASES = {
+    'default': dj_database_url.config(
+        # Replace this value with your local database's connection string.
+        default='postgresql://postgres:kali@localhost:5432/maishajunction',
+        conn_max_age=600
+    )
+}
+"""
+
+
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
