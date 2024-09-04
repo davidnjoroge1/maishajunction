@@ -26,7 +26,15 @@ SECRET_KEY = 'django-insecure-&s#4eycl(=!b0rzx7vvk%4j_t(_6@b-g=$ibd0sm6c4m99f2!c
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'maishajunction.onrender.com',
+    '127.0.0.1',
+    'localhost',
+    '100.20.92.101',
+    '44.225.181.72',
+    '44.227.217.144',
+    '*'
+]
 
 
 # Application definition
