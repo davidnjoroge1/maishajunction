@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -116,7 +117,24 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
+
+
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
+    os.path.join(BASE_DIR, 'maishajunction', 'static'),
+]
+
+if not DEBUG:
+    STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+# this setting is for development, on production we shall change it to the exact origins
+CORS_ALLOW_ALL_ORIGINS = True  
+CORS_ALLOW_CREDENTIALS = True
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
