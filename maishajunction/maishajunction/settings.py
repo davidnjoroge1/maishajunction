@@ -83,7 +83,7 @@ WSGI_APPLICATION = 'maishajunction.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
-"""
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -100,6 +100,7 @@ DATABASES = {
         conn_max_age=600
     )
 }
+"""
 
 
 # Password validation
